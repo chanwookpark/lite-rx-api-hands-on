@@ -1,15 +1,16 @@
 package io.pivotal.literx;
 
-import java.util.Iterator;
-
 import io.pivotal.literx.domain.User;
 import io.pivotal.literx.repository.ReactiveRepository;
 import io.pivotal.literx.repository.ReactiveUserRepository;
-import static junit.framework.TestCase.assertEquals;
-import static org.junit.Assert.assertFalse;
 import org.junit.Test;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import java.util.Iterator;
+
+import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 /**
  * Learn how to turn Reactive API to blocking one.
@@ -31,7 +32,7 @@ public class Part07ReactiveToBlocking {
 
 	// TODO Return the user contained in that Mono
 	User monoToValue(Mono<User> mono) {
-		return null;
+		return mono.block();
 	}
 
 //========================================================================================
@@ -50,7 +51,7 @@ public class Part07ReactiveToBlocking {
 
 	// TODO Return the users contained in that Flux
 	Iterable<User> fluxToValues(Flux<User> flux) {
-		return null;
+		return flux.toIterable();
 	}
 
 }
