@@ -7,7 +7,7 @@ import reactor.core.publisher.Flux;
 /**
  * @author chanwook
  */
-public class Part1Test {
+public class Part1FluxTest {
 
     @Test
     public void emptyFlux() throws Exception {
