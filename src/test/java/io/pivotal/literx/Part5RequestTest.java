@@ -1,8 +1,9 @@
-package io.pivotal.literx.test;
+package io.pivotal.literx;
 
 import io.pivotal.literx.domain.User;
 import io.pivotal.literx.repository.ReactiveRepository;
 import io.pivotal.literx.repository.ReactiveUserRepository;
+import io.pivotal.literx.test.TestSubscriber;
 import org.junit.Test;
 import reactor.core.publisher.Flux;
 
